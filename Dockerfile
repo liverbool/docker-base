@@ -4,7 +4,7 @@ MAINTAINER  Liverbool "nukboon@gmail.com"
 
 #ENV DEBIAN_FRONTEND noninteractive
 
-RUN echo 'Asia/Bangkok' | sudo tee /etc/timezone
+RUN echo 'Asia/Bangkok' | tee /etc/timezone
 
 RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup
 RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
